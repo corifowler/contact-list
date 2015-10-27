@@ -208,7 +208,7 @@ Object.defineProperty(exports, '__esModule', {
 });
 function processData(data) {
 	return data.map(function (item) {
-		return '\n\t\t\t<div class="artist-list-item" data-artist-id="' + item.objectId + '">\n\t\t\t<img src="' + item.Photo + '">\n\t\t\t<span>' + item.Artist + '</span>\n\t\t\t<hr>\n\t\t\t</div>\n\t\t\t';
+		return '\n\t\t\t<div class="artist-list-item" data-artist-id="' + item.objectId + '">\n\t\t\t<img src="' + item.Photo + '">\n\t\t\t<p>' + item.Artist + '</p>\n\t\t\t<hr>\n\t\t\t</div>\n\t\t\t';
 	}).join('');
 }
 
@@ -227,7 +227,7 @@ Object.defineProperty(exports, "__esModule", {
 });
 function artistTemplate(data) {
 
-  return "\n    <div><img class=\"profile\" src=\"" + data.Photo + "\"></div>\n    <div><i class=\"fa fa-user\"></i>" + data.Artist + "</div>\n    <hr>\n    <div><i class=\"fa fa-chevron-right\"></i>Song Title: " + data.SongTitle + "</div>\n    <hr>\n    <div><i class=\"fa fa-chevron-right\"></i>Album Name: " + data.Album + "</div>\n    <hr>\n    <div class=\"twitter\"><i class=\"fa fa-twitter\"></i>" + data.Twitter + "</div>";
+  return "\n    <div class=\"full-profile\">\n      <h2>Artist Profile</h2>\n      <div><img class=\"profile\" src=\"" + data.Photo + "\"></div>\n      <div><i class=\"fa fa-user\"></i>" + data.Artist + "</div>\n      <hr>\n      <div><i class=\"fa fa-chevron-right\"></i>Song Title: " + data.SongTitle + "</div>\n      <hr>\n      <div><i class=\"fa fa-chevron-right\"></i>Album Name: " + data.Album + "</div>\n      <hr>\n      <div class=\"twitter\"><i class=\"fa fa-twitter\"></i>" + data.Twitter + "</div>\n    </div>";
 }
 
 exports["default"] = artistTemplate;

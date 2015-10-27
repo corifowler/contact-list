@@ -3,7 +3,7 @@ function processData(data) {
 		return `
 			<div class="artist-list-item" data-artist-id="${item.objectId}">
 			<img src="${item.Photo}">
-			<span>${item.Artist}</span>
+			<p>${item.Artist}</p>
 			<hr>
 			</div>
 			`;
