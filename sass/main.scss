@@ -3,4 +3,42 @@
 
 body {
   background: #e2ebf3;
+  font-family: 'Inconsolata', ;
+
+  h2{
+  	margin-left: 5%;
+  }
+
+  img {
+  	width: 50px;
+  	height: 50px;
+  	border-radius: 5px;
+  	padding: 3px;
+  }
+
+  .artist-list-item {
+  	max-width: 50%;
+  	padding: 10px;
+  	margin-left: 5%;
+  	font-size: 18px;
+
+  	span {
+  		padding: 5px;
+  	}
+  }
+
+  .profile {
+  	width: 300px;
+  	height: 300px;
+  }
+
+  .twitter {
+  	color: #50ABF1;
+  }
+
+  .fa {
+  	padding: 5px;
+  	color: black;
+  }
 }
+
