@@ -155,6 +155,13 @@ var Router = _backbone2['default'].Router.extend({
       var artistId = $div.data('artist-id');
       router.navigate('artists/' + artistId);
       router.showIndividualArtist(artistId);
+      // back to home button
+      var backButton = (0, _jquery2['default'])('.back');
+      backButton.on('click', function (event) {
+        var $div = (0, _jquery2['default'])(event.currentTarget);
+        router.navigate('\'\'');
+        router.artistList();
+      });
     });
   },
 
@@ -227,7 +234,7 @@ Object.defineProperty(exports, "__esModule", {
 });
 function artistTemplate(data) {
 
-  return "\n    <div class=\"full-profile\">\n      <h2>Artist Profile</h2>\n      <div><img class=\"profile\" src=\"" + data.Photo + "\"></div>\n      <div><i class=\"fa fa-user\"></i>" + data.Artist + "</div>\n      <hr>\n      <div><i class=\"fa fa-chevron-right\"></i>Song Title: " + data.SongTitle + "</div>\n      <hr>\n      <div><i class=\"fa fa-chevron-right\"></i>Album Name: " + data.Album + "</div>\n      <hr>\n      <div class=\"twitter\"><i class=\"fa fa-twitter\"></i>" + data.Twitter + "</div>\n    </div>";
+  return "\n    <div class=\"full-profile\">\n      <button class=\"back\"><i class=\"fa fa-arrow-left\"></i></button>\n      <h2>Artist Profile</h2>\n      <div><img class=\"profile\" src=\"" + data.Photo + "\"></div>\n      <div><i class=\"fa fa-user\"></i>" + data.Artist + "</div>\n      <hr>\n      <div><i class=\"fa fa-chevron-right\"></i>Song Title: " + data.SongTitle + "</div>\n      <hr>\n      <div><i class=\"fa fa-chevron-right\"></i>Album Name: " + data.Album + "</div>\n      <hr>\n      <div class=\"twitter\"><i class=\"fa fa-twitter\"></i>" + data.Twitter + "</div>\n    </div>";
 }
 
 exports["default"] = artistTemplate;

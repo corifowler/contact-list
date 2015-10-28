@@ -23,6 +23,13 @@ let Router = Backbone.Router.extend({
       let artistId = $div.data('artist-id');
       router.navigate(`artists/${artistId}`);
       router.showIndividualArtist(artistId);
+      // back to home button
+      let backButton = $('.back');
+      backButton.on('click', function(event) {
+        let $div = $(event.currentTarget);
+        router.navigate(`''`);
+        router.artistList();
+      })
     });
 
   },
@@ -57,7 +64,6 @@ let Router = Backbone.Router.extend({
         router.$el.html(artistTemplate(artist.toJSON()));
       });
     }
-
   },
 
   start: function() {

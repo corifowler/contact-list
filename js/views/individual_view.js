@@ -2,6 +2,7 @@ function artistTemplate(data) {
 
   return `
     <div class="full-profile">
+      <button class="back"><i class="fa fa-arrow-left"></i></button>
       <h2>Artist Profile</h2>
       <div><img class="profile" src="${data.Photo}"></div>
       <div><i class="fa fa-user"></i>${data.Artist}</div>
