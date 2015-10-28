@@ -14,7 +14,6 @@ function listTemplate(data) {
   return `
     <h2>Artist List</h2>
     <div>${processData(data)}</div>
-    <hr>
   `;
 }
 

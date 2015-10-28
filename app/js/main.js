@@ -213,7 +213,7 @@ function processData(data) {
 }
 
 function listTemplate(data) {
-	return '\n    <h2>Artist List</h2>\n    <div>' + processData(data) + '</div>\n    <hr>\n  ';
+	return '\n    <h2>Artist List</h2>\n    <div>' + processData(data) + '</div>\n  ';
 }
 
 exports['default'] = listTemplate;
