@@ -159,7 +159,7 @@ var Router = _backbone2['default'].Router.extend({
       var backButton = (0, _jquery2['default'])('.back');
       backButton.on('click', function (event) {
         var $div = (0, _jquery2['default'])(event.currentTarget);
-        router.navigate('\'\'');
+        router.navigate();
         router.artistList();
       });
     });

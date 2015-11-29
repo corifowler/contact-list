@@ -27,7 +27,7 @@ let Router = Backbone.Router.extend({
       let backButton = $('.back');
       backButton.on('click', function(event) {
         let $div = $(event.currentTarget);
-        router.navigate(`''`);
+        router.navigate();
         router.artistList();
       })
     });
